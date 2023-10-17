@@ -34,9 +34,8 @@
 #     "any.go":
 #       runner: go run
 
-
 pre-commit:
-  parallel:true
+  parallel: true
   commands:
     frontend-linter:
-        run: yarn lint
+      run: yarn lint

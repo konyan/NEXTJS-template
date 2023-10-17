@@ -39,3 +39,11 @@ pre-commit:
   commands:
     frontend-linter:
       run: yarn lint
+    prettier:
+      run: yarn prettier
+
+pre-push:
+  parallel: true
+  commands:
+    frontend-build:
+      run: yarn build

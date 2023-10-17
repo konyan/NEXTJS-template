@@ -1,5 +1,10 @@
-import Image from 'next/image';
+import Layout from '@/components/layout';
+import PersonalBlog from '@/containers/HomePage';
 
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <Layout>
+      <PersonalBlog />
+    </Layout>
+  );
 }

@@ -47,3 +47,10 @@ pre-push:
   commands:
     frontend-build:
       run: yarn build
+
+# lefthook.yml
+
+commit-msg:
+  scripts:
+    'commitlint.sh':
+      runner: bash

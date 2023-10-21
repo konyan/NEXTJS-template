@@ -1,10 +1,5 @@
-import Layout from '@/components/layout';
-import PersonalBlog from '@/containers/HomePage';
+import Nav from '@/components/Nav/Nav';
 
 export default function Home() {
-  return (
-    <Layout>
-      <PersonalBlog />
-    </Layout>
-  );
+  return <Nav />;
 }

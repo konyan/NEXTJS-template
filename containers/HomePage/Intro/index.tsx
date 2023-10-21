@@ -1,41 +1,41 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import SocialProfile from "components/SocialProfile/SocialProfile"
-import { IntroWrapper, IntroImage, IntroTitle, Desciption } from "./style"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Image from 'gatsby-image';
+import SocialProfile from 'components/SocialProfile/SocialProfile';
+import { IntroWrapper, IntroImage, IntroTitle, Desciption } from './style';
 import {
   IoLogoFacebook,
   IoLogoTwitter,
   IoLogoInstagram,
   IoLogoGithub,
-} from "react-icons/io"
+} from 'react-icons/io';
 
-type IntroProps = {}
+type IntroProps = {};
 
 const SocialLinks = [
   {
     icon: <IoLogoFacebook />,
-    url: "#",
-    tooltip: "Facebook",
+    url: '#',
+    tooltip: 'Facebook',
   },
   {
     icon: <IoLogoInstagram />,
-    url: "#",
-    tooltip: "Instagram",
+    url: '#',
+    tooltip: 'Instagram',
   },
   {
     icon: <IoLogoTwitter />,
-    url: "#",
-    tooltip: "Twitter",
+    url: '#',
+    tooltip: 'Twitter',
   },
   {
     icon: <IoLogoGithub />,
-    url: "#",
-    tooltip: "Github",
+    url: '#',
+    tooltip: 'Github',
   },
-]
+];
 
-const Intro: React.FunctionComponent<IntroProps> = props => {
+const Intro: React.FunctionComponent<IntroProps> = (props) => {
   const Data = useStaticQuery(graphql`
     query {
       avatar: file(absolutePath: { regex: "/author.jpg/" }) {
@@ -52,10 +52,10 @@ const Intro: React.FunctionComponent<IntroProps> = props => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, about } = Data.site.siteMetadata
-  const AuthorImage = Data.avatar.childImageSharp.fluid
+  const { author, about } = Data.site.siteMetadata;
+  const AuthorImage = Data.avatar.childImageSharp.fluid;
 
   return (
     <IntroWrapper>
@@ -68,7 +68,7 @@ const Intro: React.FunctionComponent<IntroProps> = props => {
       <Desciption>{about}</Desciption>
       <SocialProfile items={SocialLinks} />
     </IntroWrapper>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

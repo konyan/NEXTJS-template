@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 w-full bg-gray-600 border-none">
+    <div className="fixed bottom-0 w-full bg-black_2 border-none index-6">
       <div className="w-24 h-24 absolute left-1/2 -top-14 rounded-full">
         <Image src="/circle.svg" alt="cirlce" fill />
       </div>

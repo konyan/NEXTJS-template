@@ -9,19 +9,24 @@ export default function Home() {
   return (
     <div>
       <Cursor />
-      <div className="flex justify-center w-[80%] m-auto flex-col mt-2">
-        <Nav />
-        <section className="grid grid-cols-3 mt-6 gap-20">
-          <div className="col-span-1">
-            <ProfileSummary />
-          </div>
-          <div className="col-span-2 flex gap-2 flex-col">
-            <BlogItem />
-            <BlogItem />
-            <BlogItem />
-            <BlogItem />
-            <BlogItem />
-            <Pagination />
+      <div>
+        <div className="w-[80%] flex justify-center h-full m-auto flex-col mt-2">
+          <Nav />
+        </div>
+        <section className="flex flex-col items-center  pt-6 gap-4 lg:gap-20 overflow-scroll h-[1000px]">
+          <div className="w-[80%] lg:grid lg:grid-cols-3">
+            <div className="lg:col-span-1 border-b border-black_2">
+              <ProfileSummary />
+            </div>
+            <div className="flex gap-2 flex-col lg:col-span-2">
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <BlogItem />
+              <Pagination /> {/* hide in mobile device */}
+            </div>
           </div>
         </section>
       </div>

@@ -23,7 +23,7 @@ export const socials = [
 const Nav = () => {
   return (
     <div>
-      <nav className="flex w-full justify-between items-center py-4">
+      <nav className="flex w-full justify-between items-center py-2 lg:py-4">
         <Link href="/">
           <Image src="/favicon.svg" alt="konyan' logo" width="32" height="32" />
         </Link>

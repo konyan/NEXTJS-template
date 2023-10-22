@@ -19,6 +19,9 @@ module.exports = {
       black: '#000',
       black_2: '#1a1a1a',
     },
+    fontFamily: {
+      en: ['var(--font-en)', 'sans-serif'],
+    },
   },
   plugins: [],
 };

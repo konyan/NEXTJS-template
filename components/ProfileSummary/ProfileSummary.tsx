@@ -1,21 +1,21 @@
 const ProfileSummary = () => {
   return (
     <div className="flex flex-col">
-      <h1 className="w-full text-lg mb-8 text-left font-bold">
+      <h1 className="w-full text-lg mb-8 text-left font-bold font-en">
         A Dev
         <strong className="ml-3 w-12 h-6 px-4 py-3 rounded-md bg-red-500 font-medium">
           History
         </strong>
       </h1>
       <div>
-        <p className="text-lg font-thin pr-6 mb-8">
+        <p className="text-lg font-thin pr-6 mb-8 font-en">
           A developer fueled by creativity and passion. I thrive on turning
           ideas into user-friendly applications, creating seamless digital
           experiences through clean and efficient code.
         </p>
       </div>
       <div>
-        <button className="text-sm w-full font-base text-left hover:font-bold">
+        <button className="text-sm w-full font-base text-left hover:font-bold font-en py-4">
           EXPLORE ME
           <small className="w-6 h-6 rounded bg-white inline-flex justify-center items-center ml-4 f">
             <svg

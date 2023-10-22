@@ -7,7 +7,7 @@ const Footer = () => {
         <Image src="/circle.svg" alt="cirlce" fill />
       </div>
       <footer className="flex justify-center items-center w-full pt-8 pb-4">
-        <p className="text-sm text-center font-thin">
+        <p className="text-sm text-center font-thin font-en">
           © 2024 Konyan &apos; s Blog. All rights reserved.
         </p>
       </footer>

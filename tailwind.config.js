@@ -6,7 +6,18 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        card_padding: ' 1.5rem',
+      },
+    },
+    colors: {
+      primary: '#3d1766',
+      accent: '#ac59f0',
+      white: '#fff',
+      gray: '#DFDFDF',
+      black: '#000',
+    },
   },
   plugins: [],
 };

@@ -3,11 +3,16 @@ interface ButtonProps {
    * Button contents
    */
   label: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ label }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <button className="border-none outline-none text-sm w-full dark:text-white text-black font-base text-left hover:font-bold font-en py-4 uppercase">
+    <button
+      type="button"
+      onClick={onClick}
+      className="border-none outline-none text-sm w-full dark:text-white text-black font-base text-left hover:font-bold font-en py-4 uppercase"
+    >
       {label}
       <small className="w-6 h-6 rounded dark:bg-white bg-black inline-flex justify-center items-center ml-4 f">
         <svg

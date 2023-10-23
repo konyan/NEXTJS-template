@@ -1,6 +1,6 @@
-import type { Preview } from '@storybook/react';
+import type { Preview, ReactRenderer } from '@storybook/react';
 import '../public/tailwind.css'; // replace with the name of your tailwind css file
-import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import { withThemeByClassName } from '@storybook/addon-themes';
 
 const preview: Preview = {
   parameters: {
@@ -15,13 +15,12 @@ const preview: Preview = {
 };
 
 export const decorators = [
-  withThemeByDataAttribute({
+  withThemeByClassName<ReactRenderer>({
     themes: {
-      light: 'light',
+      light: '',
       dark: 'dark',
     },
     defaultTheme: 'light',
-    attributeName: 'data-mode',
   }),
 ];
 

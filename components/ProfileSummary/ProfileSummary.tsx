@@ -1,12 +1,9 @@
+import Header from '../Header/Header';
+
 const ProfileSummary = () => {
   return (
     <div className="flex flex-col">
-      <h1 className="w-full text-lg mb-8 text-left font-bold font-en">
-        A Dev
-        <strong className="ml-3 w-12 h-6 px-4 py-3 rounded-md bg-red-500 font-medium">
-          History
-        </strong>
-      </h1>
+      <Header />
       <div>
         <p className="text-lg font-thin pr-6 mb-8 font-en">
           A developer fueled by creativity and passion. I thrive on turning

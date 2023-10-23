@@ -162,3 +162,44 @@ section::-webkit-scrollbar {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+.backgroundTransition {
+  background-color: theme('colors.primary');
+  animation: colorTransition 5s infinite;
+  -webkit-animation: colorTransition 5s infinite;
+}
+
+.header::after {
+  content: ' ';
+  animation: textTransition 5s linear infinite;
+  -webkit-animation: textTransition 5s linear infinite;
+}
+@keyframes textTransition {
+  0% {
+    content: 'Note';
+  }
+  50% {
+    content: 'History';
+  }
+  100% {
+    content: 'Share';
+  }
+}
+
+@keyframes colorTransition /* Firefox */ {
+  0% {
+    background-color: theme('colors.primary');
+  }
+  100% {
+    background-color: theme('colors.accent');
+  }
+}
+
+@-webkit-keyframes colorTransition /* Safari and Chrome */ {
+  0% {
+    background-color: theme('colors.primary');
+  }
+  100% {
+    background-color: theme('colors.accent');
+  }
+}

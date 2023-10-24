@@ -1,11 +1,9 @@
 'use client';
 
-import BlogItem from '@/components/BlogItem/BlogItem';
 import Cursor from '@/components/Cursor';
 import Footer from '@/components/Footer/Footer';
 import Nav from '@/components/Nav/Nav';
-import ProfileSummary from '@/components/ProfileSummary/ProfileSummary';
-import { ThemeProvider, useTheme } from 'next-themes';
+import { ThemeProvider } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 

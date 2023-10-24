@@ -8,6 +8,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-acre), sans-serif;
+  cursor: none !important;
 }
 
 body {
@@ -28,7 +29,7 @@ body {
 .cursor {
   width: 60px;
   height: 60px;
-  background: #f7f7f7;
+  background: theme('colors.primary');
   border-radius: 100%;
   position: fixed;
   transform: translate(-50%, -50%);
@@ -101,8 +102,8 @@ body {
       conic-gradient(
           at left var(--d) bottom var(--d),
           #0000 90deg,
-          rgb(255 255 255 /0.3) 0 225deg,
-          rgb(255 255 255 /0.6) 0
+          rgb(0 0 0 /0.3) 0 225deg,
+          rgb(0 0 0 /0.6) 0
         )
         border-box,
       conic-gradient(

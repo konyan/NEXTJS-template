@@ -1,7 +1,7 @@
 const Header = () => {
   return (
     <h1
-      className="w-full text-lg mb-8 text-left font-bold font-en "
+      className="w-full text-lg lg:mb-8 mb-4 text-left font-bold font-en "
       role="heading"
     >
       A Dev

@@ -28,12 +28,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Cursor />
       <div>
-        <div className="w-[80%] flex justify-center h-full m-auto flex-col mt-2">
+        <div className="lg:w-[80%] w-full px-4 flex justify-center h-full m-auto flex-col mt-2">
           <Nav />
         </div>
         {children}
       </div>
-      <Footer />
     </ThemeProvider>
   );
 };

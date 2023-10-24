@@ -1,13 +1,27 @@
+import { formatDate } from 'pliny/utils/formatDate.js';
 import Chip from '../Chip/Chip';
+import siteMetadata from '@/data/siteMetadata';
 
-const BlogItem = () => {
+interface BlogItemProps {
+  title: string;
+  date: string;
+  tags: string[];
+  onClick: () => void;
+}
+
+const BlogItem: React.FC<BlogItemProps> = ({ title, date, tags, onClick }) => {
   return (
-    <article className="border-b pb-6 cursor-pointer hover-2">
-      <p className="text-sm font-base">စက်တင်ဘာ ၁၂, ၂၀၂၃</p>
-      <div className="mt-4 flex w-full justify-between items-center pt-1">
-        <h2 className="text-2xl font-bold">နေလို့မှ ကောင်းရဲ့လား</h2>
-        <div className="w-40 flex justify-end">
-          <Chip title="React" />
+    <article
+      className="border-b pb-6 cursor-pointer lg:hover-2"
+      onClick={onClick}
+    >
+      <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+      <div className="flex-col lg:flex-row mt-4 flex w-full lg:justify-between items-start pt-1 gap-4">
+        <h2 className="text-2xl font-bold ">{title}</h2>
+        <div className="flex lg:justify-end flex-start gap-2 lg:w-40 lg:flex-wrap w-full">
+          {tags.map((t) => (
+            <Chip title={t} key={t} />
+          ))}
         </div>
       </div>
     </article>

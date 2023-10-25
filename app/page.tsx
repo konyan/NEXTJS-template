@@ -1,12 +1,12 @@
 'use client';
 import BlogItem from '@/components/BlogItem/BlogItem';
 import ProfileSummary from '@/components/ProfileSummary/ProfileSummary';
-import { getMDXComponent } from 'next-contentlayer/hooks';
 import { allBlogs } from 'contentlayer/generated';
 import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer';
 import { useRouter } from 'next/navigation';
+import Button from '@/components/Button/Button';
 
-const MAX_POSTS = 5;
+const MAX_POSTS = 4;
 
 export default function Home() {
   const sortedPosts = sortPosts(allBlogs);
@@ -35,6 +35,13 @@ export default function Home() {
               />
             );
           })}
+          <div className="flex w-full justify-end items-end">
+            <Button
+              label="ALL POST"
+              className="font-extrabold text-lg"
+              onClick={() => router.push('/blog')}
+            />
+          </div>
         </div>
       </div>
     </section>

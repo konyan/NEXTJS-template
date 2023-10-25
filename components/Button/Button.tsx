@@ -1,17 +1,23 @@
+import classNames from 'classnames';
+
 interface ButtonProps {
   /**
    * Button contents
    */
   label: string;
   onClick?: () => void;
+  className: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick, className }) => {
   return (
     <button
       type="button"
       onClick={onClick}
-      className="border-none outline-none text-sm w-full dark:text-white text-black font-base text-left hover:font-bold font-en py-4 uppercase"
+      className={classNames(
+        'border-none outline-none text-sm  dark:text-white text-black font-base text-left hover:font-bold font-en py-4 uppercase',
+        className
+      )}
     >
       {label}
       <small className="w-6 h-6 rounded dark:bg-white bg-black inline-flex justify-center items-center ml-4 f">

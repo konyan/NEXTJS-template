@@ -33,6 +33,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
         </div>
         {children}
       </div>
+      <Footer />
     </ThemeProvider>
   );
 };

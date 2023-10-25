@@ -6,7 +6,7 @@ import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/Button/Button';
 
-const MAX_POSTS = 4;
+const MAX_POSTS = 5;
 
 export default function Home() {
   const sortedPosts = sortPosts(allBlogs);

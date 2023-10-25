@@ -12,7 +12,7 @@ interface BlogItemProps {
 const BlogItem: React.FC<BlogItemProps> = ({ title, date, tags, onClick }) => {
   return (
     <article
-      className="border-b pb-6 cursor-pointer lg:hover-2"
+      className="border-b py-3 cursor-pointer lg:hover-2"
       onClick={onClick}
     >
       <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>

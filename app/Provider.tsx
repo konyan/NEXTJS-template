@@ -27,7 +27,7 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Cursor />
-      <div>
+      <div className="pb-4">
         <div className="lg:w-[80%] w-full px-4 flex justify-center h-full m-auto flex-col mt-2">
           <Nav />
         </div>

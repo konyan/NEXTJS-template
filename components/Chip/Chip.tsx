@@ -12,7 +12,7 @@ const Chip: React.FC<ChipProps> = ({ title, rounded, onClick }) => {
       role="button"
       onClick={onClick}
       className={classNames(
-        'cursor-pointer text-xs font-extralight px-2 py-[3px] rounded justify-center items-center bg-black text-white dark:bg-gray dark:text-black text-gray-50 flex hoverShadow',
+        'cursor-pointer text-xs font-extralight px-2 py-[3px] rounded justify-center items-center bg-black dark:bg-gray-300 dark:text-black text-gray-100 flex hoverShadow',
         rounded && 'rounded-full py-3 px-4'
       )}
     >

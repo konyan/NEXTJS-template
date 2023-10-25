@@ -13,7 +13,13 @@ const ProfileSummary = () => {
         </p>
       </div>
       <div className="mb-4">
-        <Button label="explore me" />
+        <Button
+          className=""
+          label="explore me"
+          onClick={() => {
+            window.open('https://konyan.me/', '_blank');
+          }}
+        />
       </div>
     </div>
   );
